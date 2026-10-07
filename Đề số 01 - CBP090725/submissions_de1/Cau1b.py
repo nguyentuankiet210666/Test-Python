@@ -1,3 +1,3 @@
 ten = input()
 tuoi = input()
-print("Xin chao {}, ban {} tuoi.".format(ten, tuoi))
+print("Xin chào {}, bạn {} tuổi.".format(ten, tuoi))
