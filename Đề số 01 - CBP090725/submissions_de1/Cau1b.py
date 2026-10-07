@@ -1,3 +1,3 @@
-ten = input("Nhập tên của bạn: ")
-tuoi = int(input("Nhập tuổi của bạn: "))
-print("Xin chào", ten, ",bạn", tuoi, "tuổi.")
+ten = input()
+tuoi = input()
+print("Xin chao {}, ban {} tuoi.".format(ten, tuoi))

@@ -37,7 +37,11 @@ def test_normal_output(output, expected):
     expected_norm = normalize(str(expected))
     return any(expected_norm in normalize(out) for out in output)
 
-def grade(student_id="unknown", base_dir="submissions_de1"):
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def grade(student_id="unknown", base_dir=None):
+    if base_dir is None:
+        base_dir = os.path.join(SCRIPT_DIR, "submissions_de1")
     total_score = 0
     max_score = 0
     print(f"📋 Bắt đầu chấm điểm cho {student_id}\n")

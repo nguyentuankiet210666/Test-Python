@@ -9,10 +9,10 @@ tests = {
 
     # Câu 1b: Nhập tên và tuổi, in theo mẫu
     "Cau1b": [
-        {"input": "An\n20\n", "expected": "Xin chào An, bạn 20 tuổi."},
-        {"input": "Long\n18\n", "expected": "Xin chào Long, bạn 18 tuổi."},
-        {"input": "Hà\n22\n", "expected": "Xin chào Hà, bạn 22 tuổi."}
-    ],
+    {"input": "An\n20\n", "expected": ["Xin chào An, bạn 20 tuổi."]},
+    {"input": "Long\n18\n", "expected": ["Xin chào Long, bạn 18 tuổi."]},
+    {"input": "Hà\n22\n", "expected": ["Xin chào Hà, bạn 22 tuổi."]}
+],
 
     # Câu 2a: In bảng bình phương các số nguyên từ 1 đến 10
     "Cau2a":  [
