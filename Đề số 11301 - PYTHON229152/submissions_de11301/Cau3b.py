@@ -1,9 +1,11 @@
-"""Câu 3b: Tổng các số dương chẵn trong danh sách."""
-from Cau3a import nhap_danh_sach
-
-def tong_duong_chan(ds):
-    return sum(x for x in ds if x > 0 and x % 2 == 0)
-
-if __name__ == "__main__":
-    ds = nhap_danh_sach()
-    print("C3B =", tong_duong_chan(ds))
+ds = []
+while True:
+    x = int(input('Nhap so: '))
+    if x == 0:
+        break
+    ds.append(x)
+tong = 0
+for x in ds:
+    if x > 0 and x % 2 == 0:
+        tong += x
+print('C3B =', tong)
