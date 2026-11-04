@@ -1,32 +1,40 @@
-# Đề thi Python - Mã đề 11301
+# Đề số 11301 - Lập trình Python (229152)
 
-Nguồn: tài liệu **Lập trình Python (229152)_ca7h30, 22-7.pdf** do người dùng cung cấp.
-Hình thức thực hành 90 phút; 5 câu, mỗi câu 2 điểm.
+Gồm 5 câu, chia thành **13 ý** (a/b/c), chấm tổng 10 điểm.
+Đề gốc do người dùng cung cấp, tên file `Lập trình Python (229152)_ca7h30, 22-7.pdf`.
 
-## Nội dung
-- Câu 1: nhập n trong [1,1500], đếm chữ số lẻ, tính S = 1/2 + 1/4 + ... + 1/(2n).
-- Câu 2: đếm chữ hoa, kiểm tra chuỗi đối xứng, cộng các chữ số.
-- Câu 3: list số nguyên nhập đến số 0; tính tổng số dương chẵn; đếm k.
-- Câu 4: dictionary lưu sách; xóa sách theo mã, thông báo nếu không tìm thấy.
-- Câu 5: lớp DienThoai với 5 thuộc tính, khởi tạo và in thông tin hai đối tượng.
+## Bài làm
+Trong `submissions_de11301/`:
+- `Cau1a.py`, `Cau1b.py`, `Cau1c.py`: kiểm tra n; đếm chữ số lẻ; tính tổng S.
+- `Cau2a.py`, `Cau2b.py`, `Cau2c.py`: đếm chữ hoa; đối xứng; tổng chữ số.
+- `Cau3a.py`, `Cau3b.py`, `Cau3c.py`: nhập list; tổng dương chẵn; đếm k.
+- `Cau4a.py`, `Cau4b.py`: nhập dictionary sách; xóa theo mã.
+- `Cau5a.py`, `Cau5b.py`: lớp DienThoai; tạo 2 đối tượng.
 
-## Cấu trúc
-- `submissions_de11301/Cau1.py` ... `Cau5.py`: 5 file bài làm đúng cấu trúc đề.
-- `test_de11301.py`: input và expected cho từng trường hợp.
-- `autograde_de11301_v1.py`: điểm vào chạy nhanh.
-- `autograde_de11301_v2.py`: thông báo PASS/FAIL, lý do, điểm từng câu và tổng điểm.
+Các file `Cau1.py` ... `Cau5.py` cũ được giữ lại để tham khảo; **bộ chấm mới dùng từng file a/b/c**.
 
-## Cách chạy
-Mở terminal tại thư mục này:
+## Bộ chấm
+- `test_de11301.py`: tập test cho từng ý.
+- `autograde_de11301_v1.py`: lệnh chạy ngắn (gọi v2).
+- `autograde_de11301_v2.py`: chi tiết PASS/FAIL, expected/actual, điểm từng ý theo đáp án gốc.
 
-```bash
+Tại thư mục chứa bộ chấm, chạy:
+
+```powershell
 python autograde_de11301_v2.py
-python submissions_de11301/Cau1.py
 ```
 
-**Quy ước kiểm thử:** Đầu ra có dạng `C1A = 635` để tách dữ liệu cần chấm khỏi lời nhắc nhập.
-Bộ chấm so sánh toàn bộ nhãn yêu cầu (không chỉ khớp chuỗi con).
-Điểm mỗi câu được tính theo tỷ lệ test PASS trên tổng số test, tối đa 2 điểm/câu.
-Có thể mở rộng test trong `test_de11301.py`.
+## Thang điểm
+| Câu | a | b | c | Tổng |
+|---|---:|---:|---:|---:|
+| 1 | 0.50 | 0.75 | 0.75 | 2.00 |
+| 2 | 0.75 | 0.50 | 0.75 | 2.00 |
+| 3 | 0.75 | 0.75 | 0.50 | 2.00 |
+| 4 | 1.50 | 0.50 | - | 2.00 |
+| 5 | 1.00 | 1.00 | - | 2.00 |
 
-**Lưu ý:** Đề yêu cầu folder HOTEN_MSSV chứa 5 file .py khi nộp. Bộ test/chấm và README là file hỗ trợ, không thuộc 5 file nộp.
+**Quy ước output:** `C2A = 2`, `C3B = 4`, v.v. để bộ chấm đọc đúng từng ý.
+Các file b/c có thể import hàm ở file a ngay cùng thư mục.
+
+Đề yêu cầu nộp **5 file .py** đặt trong folder `HOTEN_MSSV`.
+Các file chia nhỏ là để học và test; khi nộp cần gộp mỗi câu thành một file.
