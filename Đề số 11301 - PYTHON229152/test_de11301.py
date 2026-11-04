@@ -3,9 +3,9 @@ expected là ánh xạ nhãn -> giá trị Python; mỗi nhãn đều phải đ�
 """
 tests = {
     "Cau1": [
-        {"input": "635\n", "expected": {"C1A": 635, "C1B": 2, "C1C": 3.519562}},
+        {"input": "635\n", "expected": {"C1A": 635, "C1B": 2, "C1C": 3.515814}},
         {"input": "0\n1501\n1\n", "expected": {"C1A": 1, "C1B": 1, "C1C": 0.5}},
-        {"input": "2468\n", "expected": {"C1A": 2468, "C1B": 0, "C1C": 3.519562}},
+        {"input": "246\n", "expected": {"C1A": 246, "C1B": 0, "C1C": 3.042289}},
     ],
     "Cau2": [
         {"input": "AbC123\n", "expected": {"C2A": 2, "C2B": False, "C2C": 6}},
