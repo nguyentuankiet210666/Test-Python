@@ -1,10 +1,12 @@
-"""Câu 3c: Đếm số lần xuất hiện của k trong danh sách."""
-from Cau3a import nhap_danh_sach
-
-def dem_k(ds, k):
-    return ds.count(k)
-
-if __name__ == "__main__":
-    ds = nhap_danh_sach()
-    k = int(input("Nhập k: "))
-    print("C3C =", dem_k(ds, k))
+ds = []
+while True:
+    x = int(input('Nhap so: '))
+    if x == 0:
+        break
+    ds.append(x)
+k = int(input('Nhap k: '))
+dem = 0
+for x in ds:
+    if x == k:
+        dem += 1
+print('C3C =', dem)
