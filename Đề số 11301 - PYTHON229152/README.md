@@ -11,7 +11,7 @@ Trong `submissions_de11301/`:
 - `Cau4a.py`, `Cau4b.py`: nhập dictionary sách; xóa theo mã.
 - `Cau5a.py`, `Cau5b.py`: lớp DienThoai; tạo 2 đối tượng.
 
-Các file `Cau1.py` ... `Cau5.py` cũ được giữ lại để tham khảo; **bộ chấm mới dùng từng file a/b/c**.
+Đã xóa `Cau1.py` đến `Cau5.py`. Chỉ còn các file a/b/c viết đơn giản để dễ học.
 
 ## Bộ chấm
 - `test_de11301.py`: tập test cho từng ý.
