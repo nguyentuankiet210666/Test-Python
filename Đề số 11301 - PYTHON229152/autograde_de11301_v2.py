@@ -75,10 +75,10 @@ def extract(line):
     if "đối xứng" in low or "doi xung" in low:
         return True
     # Chỉ lấy số ở CUỐI dòng, không lấy các số nằm trong lời giải thích.
-    match = re.search(r"[-+]?\\d+(?:\\.\\d+)?(?:[eE][-+]?\\d+)?\\s*$", line)
-    if match:
-        return read_value(match.group().strip())
-    return None
+    # Lay gia tri cuoi dong, bat ke phan mo ta o truoc.
+    last = line.split()[-1]
+    return read_value(last)
+
 
 def find_values(stdout):
     return [v for line in stdout.splitlines() if (v := extract(line)) is not None]
