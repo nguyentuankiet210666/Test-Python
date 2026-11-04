@@ -21,7 +21,9 @@ def parse_output(stdout):
         if " = " not in line:
             continue
         key, raw = line.split(" = ", 1)
-        key = key.strip()
+        # Loi nhac input() co the nam cung dong voi nhan C1A/C2A/...
+        # Lay tu cuoi cung truoc dau = de xac dinh dung nhan ket qua.
+        key = key.strip().split()[-1]
         try:
             values[key] = ast.literal_eval(raw.strip())
         except (SyntaxError, ValueError):
