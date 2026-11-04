@@ -33,7 +33,7 @@ python autograde_de11301_v2.py
 | 4 | 1.50 | 0.50 | - | 2.00 |
 | 5 | 1.00 | 1.00 | - | 2.00 |
 
-**Quy ước output:** `C2A = 2`, `C3B = 4`, v.v. để bộ chấm đọc đúng từng ý.
+**Bộ chấm chỉ kiểm tra giá trị kết quả:** có thể dùng `print(2)`, `print('Kết quả:', 2)` hoặc `print('C2A =', 2)`. Không bắt buộc nhãn C1A/C2A. Lời nhắc `input()` bị bỏ qua khi chấm.
 Các file b/c có thể import hàm ở file a ngay cùng thư mục.
 
 Đề yêu cầu nộp **5 file .py** đặt trong folder `HOTEN_MSSV`.
