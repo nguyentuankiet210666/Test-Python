@@ -1,6 +1,7 @@
 """Chấm mã đề 11301: đủ nhãn, đúng giá trị, thông báo lý do FAIL."""
 import ast
 import math
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -29,6 +30,9 @@ def parse_output(stdout):
 
 def grade():
     total = 0.0
+    child_env = os.environ.copy()
+    child_env["PYTHONIOENCODING"] = "utf-8"
+    child_env["PYTHONUTF8"] = "1"
     for filename, cases in tests.items():
         path = SUBMISSIONS / (filename + ".py")
         passed = 0
@@ -42,7 +46,7 @@ def grade():
                     [sys.executable, str(path)],
                     input=case["input"], capture_output=True,
                     text=True, encoding="utf-8", errors="replace",
-                    timeout=3, cwd=str(SUBMISSIONS)
+                    timeout=3, cwd=str(SUBMISSIONS), env=child_env
                 )
                 if r.returncode != 0:
                     last_error = r.stderr.strip().splitlines()
