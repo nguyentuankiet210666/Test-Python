@@ -1,4 +1,6 @@
-"""Câu 1c: Tính S = 1/2 + 1/4 + ... + 1/(2n)."""
+n = int(input("Nhap n: "))
+while n < 1 or n > 1500:
+    n = int(input("Nhap lai n: "))
 
 def tinh_s(n):
     s = 0
@@ -6,8 +8,4 @@ def tinh_s(n):
         s += 1 / (2 * i)
     return s
 
-if __name__ == "__main__":
-    from Cau1a import nhap_n
-
-    n = nhap_n()
-    print("C1C =", round(tinh_s(n), 6))
+print("C1C =", round(tinh_s(n), 6))
